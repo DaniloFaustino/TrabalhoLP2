@@ -7,6 +7,11 @@
         mc:Ignorable="d"
         Title="Menu" Height="300" Width="300">
     <Grid>
-        
+        <TextBlock x:Name="TxtMenu" HorizontalAlignment="Left" Height="28" Margin="10,23,0,0" TextWrapping="Wrap" Text="SELECIONE A ÁREA QUE DESEJA IR" VerticalAlignment="Top" Width="272" FontSize="18" TextAlignment="Center" IsEnabled="False"/>
+        <Button x:Name="BtnFuncionario" Content="Funcionário" HorizontalAlignment="Left" Height="25" Margin="97,108,0,0" VerticalAlignment="Top" Width="90" Click="BtnFuncionario_Click"/>
+        <Button x:Name="BtnGerente" Content="Gerente" HorizontalAlignment="Left" Height="25" Margin="97,78,0,0" VerticalAlignment="Top" Width="90" RenderTransformOrigin="0.517,0.023" Click="BtnGerente_Click"/>
+        <Button x:Name="BtnEstoque" Content="Estoque" HorizontalAlignment="Left" Height="25" Margin="97,138,0,0" VerticalAlignment="Top" Width="90" Click="BtnEstoque_Click"/>
+        <Button x:Name="BtnFaturamento" Content="Faturamento" HorizontalAlignment="Left" Height="25" Margin="97,168,0,0" VerticalAlignment="Top" Width="90" Click="BtnFaturamento_Click"/>
+
     </Grid>
 </Window>

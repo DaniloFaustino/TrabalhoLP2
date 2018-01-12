@@ -23,5 +23,29 @@ namespace Trabalho
         {
             InitializeComponent();
         }
+
+        private void BtnGerente_Click(object sender, RoutedEventArgs e)
+        {
+            Gerente ger = new Gerente();
+            ger.ShowDialog(); 
+        }
+
+        private void BtnFuncionario_Click(object sender, RoutedEventArgs e)
+        {
+            Funcionario fun = new Funcionario();
+            fun.ShowDialog(); 
+        }
+
+        private void BtnEstoque_Click(object sender, RoutedEventArgs e)
+        {
+            Estoque est = new Estoque();
+            est.ShowDialog(); 
+        }
+
+        private void BtnFaturamento_Click(object sender, RoutedEventArgs e)
+        {
+            Faturamento fat = new Faturamento();
+            fat.ShowDialog(); 
+        }
     }
 }

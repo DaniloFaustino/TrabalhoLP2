@@ -7,9 +7,12 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <TextBox x:Name="TxtUser" HorizontalAlignment="Left" Height="40" Margin="174,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" TextChanged="TxtUser_TextChanged"/>
+        <TextBox x:Name="TxtUser" HorizontalAlignment="Left" Height="40" Margin="174,99,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" TextChanged="TxtUser_TextChanged"/>
         <PasswordBox x:Name="PswSenha" HorizontalAlignment="Left" Height="40" Margin="174,176,0,0" VerticalAlignment="Top" Width="170"/>
         <Button x:Name="BtnLogin" Content="Entrar&#xD;&#xA;" HorizontalAlignment="Left" Height="31" Margin="174,238,0,0" VerticalAlignment="Top" Width="170" Click="BtnLogin_Click"/>
+        <TextBlock x:Name="TxtGerente" HorizontalAlignment="Left" Height="24" Margin="174,70,0,0" TextWrapping="Wrap" Text="Código de Gerente" VerticalAlignment="Top" Width="170" FontSize="20" FontFamily="Microsoft Sans Serif" TextAlignment="Right" IsEnabled="False"/>
+        <TextBlock x:Name="TxtSenha" HorizontalAlignment="Left" Height="24" Margin="185,144,0,0" TextWrapping="Wrap" Text="Senha" VerticalAlignment="Top" Width="145" TextAlignment="Center" FontSize="20" FontFamily="Microsoft Sans Serif" IsEnabled="False"/>
+        <TextBlock x:Name="TxtErro" HorizontalAlignment="Left" Height="25" Margin="174,284,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" IsEnabled="False" FontFamily="Microsoft Sans Serif" TextAlignment="Center"/>
 
     </Grid>
 </Window>

@@ -39,11 +39,13 @@ namespace Trabalho
 
             if(TxtUser.Text == "" || PswSenha.Password == "")
             {
-                TxtUser.Text = "Informações Inválidas";
+                TxtErro.Text = "Informações Inválidas";
+                TxtUser.Text = "";
+                PswSenha.Password = ""; 
             }
             else
             {
-                comd.CommandText = "SELECT Id FROM GERENTE WHERE CÓDIGO = @Codigo AND SENHA = @Senha";
+                comd.CommandText = Funcionalidade.Login();
                 comd.Parameters.AddWithValue("Codigo", TxtUser.Text);
                 comd.Parameters.AddWithValue("Senha", PswSenha.Password);
                
@@ -60,7 +62,9 @@ namespace Trabalho
 
                 if (s == 0)
                 {
-                    TxtUser.Text = "Informações Inválidas";
+                    TxtErro.Text = "Informações Inválidas";
+                    TxtUser.Text = "";
+                    PswSenha.Password = ""; 
                 }
                 else
                 {
