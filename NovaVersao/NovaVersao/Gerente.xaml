@@ -9,10 +9,10 @@
     <Grid>
         <TextBlock x:Name="BlkDesejo" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" Text="O QUE DESEJA FAZER?" VerticalAlignment="Top" Width="272" Margin="10,10,0,0" IsEnabled="False" FontSize="20" FontFamily="Microsoft Sans Serif" TextAlignment="Center" FontWeight="Bold"/>
         <Button x:Name="BtnAdicionarGerente" HorizontalAlignment="Left" Height="30" Margin="10,75,0,0" VerticalAlignment="Top" Width="140" Content="ADICIONAR GERENTE" Click="BtnAdicionarGerente_Click"/>
-        <TextBox x:Name="TxtCodigo" TextWrapping="Wrap" Margin="10,75,142,164" Visibility="Collapsed"/>
-        <TextBlock x:Name="BlkCodigoFuncionario" HorizontalAlignment="Left" Height="22" Margin="10,48,0,0" TextWrapping="Wrap" Text="Código do Funcionário" VerticalAlignment="Top" Width="140" TextAlignment="Center" FontFamily="Microsoft Sans Serif" IsEnabled="False" Visibility="Collapsed"/>
+        <TextBox x:Name="TxtCodigo" TextWrapping="Wrap" Margin="10,75,342,164" Visibility="Collapsed"/>
+        <TextBlock x:Name="BlkCodigoFuncionario" HorizontalAlignment="Left" Height="22" Margin="10,48,0,0" TextWrapping="Wrap" Text="Código do Funcionário" VerticalAlignment="Top" Width="140" TextAlignment="Center" FontFamily="Microsoft Sans Serif" IsEnabled="False" Visibility="Collapsed" FontWeight="Bold"/>
         <Button x:Name="BtnVerificarCodigo" Content="Verificar" HorizontalAlignment="Left" Height="30" Margin="155,75,0,0" VerticalAlignment="Top" Width="60" Click="BtnVerificarCodigo_Click" Visibility="Collapsed"/>
-        <TextBlock x:Name="BlkDigiteSenha" HorizontalAlignment="Left" Height="20" Margin="10,122,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178" Visibility="Collapsed"><Run Text="DIGITE A SENHA PARA ACESSO"/></TextBlock>
+        <TextBlock x:Name="BlkDigiteSenha" HorizontalAlignment="Left" Height="20" Margin="10,122,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178" Visibility="Collapsed" FontWeight="Bold"><Run Text="DIGITE A SENHA PARA ACESSO"/></TextBlock>
         <Button x:Name="BtnRegistro" Content="Registrar" HorizontalAlignment="Left" Height="30" Margin="10,182,0,0" VerticalAlignment="Top" Width="70" Click="BtnRegistro_Click" Visibility="Collapsed"/>
         <TextBlock x:Name="BlkErrosInfos" HorizontalAlignment="Left" Height="29" Margin="10,230,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="152" IsEnabled="False"/>
         <Button x:Name="BtnAtualizarGerente" Content="ATUALIZAR GERENTE" HorizontalAlignment="Left" Height="30" Margin="10,112,0,0" VerticalAlignment="Top" Width="140"/>

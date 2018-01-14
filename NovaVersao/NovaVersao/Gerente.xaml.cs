@@ -32,6 +32,8 @@ namespace NovaVersao
             BtnVerificarCodigo.Visibility = System.Windows.Visibility.Visible;
             BtnAtualizarGerente.Visibility = System.Windows.Visibility.Collapsed;
             BtnVisualizarGerente.Visibility = System.Windows.Visibility.Collapsed;
+            BlkCodigoFuncionario.Visibility = System.Windows.Visibility.Visible;
+            BlkDesejo.Text = "REGISTRANDO GERENTE";
         }
 
         private void BtnVerificarCodigo_Click(object sender, RoutedEventArgs e)
