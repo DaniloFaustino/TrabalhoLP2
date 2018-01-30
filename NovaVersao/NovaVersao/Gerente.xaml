@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:NovaVersao"
         mc:Ignorable="d"
         Title="Gerente" Height="300" Width="500">
-    <Grid>
+    <Grid Margin="0,0,0,-7">
         <TextBlock x:Name="BlkDesejo" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" Text="O QUE DESEJA FAZER?" VerticalAlignment="Top" Width="272" Margin="10,10,0,0" IsEnabled="False" FontSize="20" FontFamily="Microsoft Sans Serif" TextAlignment="Center" FontWeight="Bold"/>
         <Button x:Name="BtnAdicionarGerente" HorizontalAlignment="Left" Height="30" Margin="10,75,0,0" VerticalAlignment="Top" Width="140" Content="ADICIONAR GERENTE" Click="BtnAdicionarGerente_Click"/>
         <TextBox x:Name="TxtCodigo" TextWrapping="Wrap" Margin="10,75,342,164" Visibility="Collapsed"/>
@@ -15,9 +15,17 @@
         <TextBlock x:Name="BlkDigiteSenha" HorizontalAlignment="Left" Height="20" Margin="10,122,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178" Visibility="Collapsed" FontWeight="Bold"><Run Text="DIGITE A SENHA PARA ACESSO"/></TextBlock>
         <Button x:Name="BtnRegistro" Content="Registrar" HorizontalAlignment="Left" Height="30" Margin="10,182,0,0" VerticalAlignment="Top" Width="70" Click="BtnRegistro_Click" Visibility="Collapsed"/>
         <TextBlock x:Name="BlkErrosInfos" HorizontalAlignment="Left" Height="29" Margin="10,230,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="152" IsEnabled="False"/>
-        <Button x:Name="BtnAtualizarGerente" Content="ATUALIZAR GERENTE" HorizontalAlignment="Left" Height="30" Margin="10,112,0,0" VerticalAlignment="Top" Width="140"/>
+        <Button x:Name="BtnAtualizarGerente" Content="ATUALIZAR GERENTE" HorizontalAlignment="Left" Height="30" Margin="10,112,0,0" VerticalAlignment="Top" Width="140" Click="BtnAtualizarGerente_Click"/>
         <Button x:Name="BtnVisualizarGerente" Content="VISUALIZAR GERENTE" HorizontalAlignment="Left" Height="30" Margin="10,152,0,0" VerticalAlignment="Top" Width="140"/>
         <PasswordBox x:Name="PswSenhaAcesso" HorizontalAlignment="Left" Height="30" Margin="10,152,0,0" VerticalAlignment="Top" Width="140" Visibility="Collapsed"/>
         <TextBlock x:Name="BklNomes" HorizontalAlignment="Left" Height="29" Margin="167,230,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="115" IsEnabled="False"/>
+        <TextBlock x:Name="BlkCódigoGerente" HorizontalAlignment="Left" Height="25" Margin="305,45,0,0" TextWrapping="Wrap" Text="CÓDIGO DO GERENTE" VerticalAlignment="Top" Width="138" FontWeight="Bold" TextAlignment="Center" IsEnabled="False" Visibility="Collapsed"/>
+        <Button x:Name="BtnVerficarCodigoAtt" Content="OK" HorizontalAlignment="Left" Height="25" Margin="448,75,0,0" VerticalAlignment="Top" Width="34" RenderTransformOrigin="0.42,2.451" Click="BtnVerficarCodigoAtt_Click" Visibility="Collapsed"/>
+        <TextBox x:Name="TxtCodigoGerente" HorizontalAlignment="Left" Height="25" Margin="305,75,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138" Visibility="Collapsed"/>
+        <TextBlock x:Name="BlkSenhaAtual" HorizontalAlignment="Left" Height="25" Margin="305,112,0,0" TextWrapping="Wrap" Text="SENHA ATUAL" VerticalAlignment="Top" Width="138" IsEnabled="False" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+        <PasswordBox x:Name="PswAtual" HorizontalAlignment="Left" Height="25" Margin="310,142,0,0" VerticalAlignment="Top" Width="133" Visibility="Collapsed"/>
+        <TextBlock x:Name="BlkNovaSenha" HorizontalAlignment="Left" Height="25" Margin="310,172,0,0" TextWrapping="Wrap" Text="NOVA SENHA" VerticalAlignment="Top" Width="133" TextAlignment="Center" FontWeight="Bold" IsEnabled="False" Visibility="Collapsed"/>
+        <Button x:Name="BtnGerenteAtualizar" Content="Ok" HorizontalAlignment="Left" Height="25" Margin="448,202,0,0" VerticalAlignment="Top" Width="34" Click="BtnGerenteAtualizar_Click" Visibility="Collapsed"/>
+        <PasswordBox x:Name="PswNovaSenha" HorizontalAlignment="Left" Height="25" Margin="310,202,0,0" VerticalAlignment="Top" Width="133" Visibility="Collapsed"/>
     </Grid>
 </Window>

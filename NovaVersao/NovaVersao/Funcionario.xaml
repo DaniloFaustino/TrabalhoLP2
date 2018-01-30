@@ -5,8 +5,40 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NovaVersao"
         mc:Ignorable="d"
-        Title="Funcionario" Height="300" Width="300">
+        Title="Funcionario" Height="570" Width="670">
     <Grid>
-        
+        <TextBlock x:Name="BlkDesejo" Height="45" Margin="40,10,40,0" TextWrapping="Wrap" Text="O QUE DESEJA FAZER?" VerticalAlignment="Top" FontWeight="Bold" FontSize="20" FontFamily="Microsoft Sans Serif" TextAlignment="Center" IsEnabled="False"/>
+        <TextBlock x:Name="BlkCodigoAdd" HorizontalAlignment="Left" Height="30" Margin="40,60,0,0" TextWrapping="Wrap" Text="CÓDIGO DO FUNCIONÁRIO" VerticalAlignment="Top" Width="182" IsEnabled="False" FontFamily="Microsoft Sans Serif" FontWeight="Bold" Visibility="Collapsed"/>
+        <TextBox x:Name="TxtCodigoAdd" HorizontalAlignment="Left" Height="30" Margin="40,95,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="182" Visibility="Collapsed"/>
+        <TextBlock x:Name="BlkNomeAdd" HorizontalAlignment="Left" Height="30" Margin="40,145,0,0" TextWrapping="Wrap" Text="NOME DO FUNCIONÁRIO" VerticalAlignment="Top" Width="182" IsEnabled="False" FontWeight="Bold" FontFamily="Microsoft Sans Serif" Visibility="Collapsed"/>
+        <TextBox x:Name="TxtNomeAdd" HorizontalAlignment="Left" Height="30" Margin="40,175,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="182" Visibility="Collapsed"/>
+        <TextBlock x:Name="BlkFuncaoAdd" HorizontalAlignment="Left" Height="30" Margin="40,223,0,0" TextWrapping="Wrap" Text="FUNÇÃO DO FUNCIONÁRIO" VerticalAlignment="Top" Width="182" IsEnabled="False" FontWeight="Bold" FontFamily="Microsoft Sans Serif" Visibility="Collapsed"/>
+        <TextBox x:Name="TxtFuncaoAdd" HorizontalAlignment="Left" Height="30" Margin="40,258,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="182" Visibility="Collapsed"/>
+        <TextBlock x:Name="BlkTurnoAdd" HorizontalAlignment="Left" Height="30" Margin="40,308,0,0" TextWrapping="Wrap" Text="TURNO DO FUNCIONÁRIO" VerticalAlignment="Top" Width="182" IsEnabled="False" FontWeight="Bold" FontFamily="Microsoft Sans Serif" Visibility="Collapsed"/>
+        <TextBox x:Name="TxtTurnoAdd" HorizontalAlignment="Left" Height="30" Margin="40,338,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="182" Visibility="Collapsed"/>
+        <TextBlock x:Name="BlkSalarioAdd" HorizontalAlignment="Left" Height="30" Margin="40,388,0,0" TextWrapping="Wrap" Text="SALÁRIO DO FUNCIONÁRIO" VerticalAlignment="Top" Width="195" FontFamily="Microsoft Sans Serif" FontWeight="Bold" Visibility="Collapsed"/>
+        <TextBox x:Name="TxtSalarioAdd" HorizontalAlignment="Left" Height="30" Margin="40,423,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="182" Visibility="Collapsed"/>
+        <TextBlock x:Name="BlkErros" HorizontalAlignment="Left" Height="30" Margin="10,503,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="245" IsEnabled="False"/>
+        <TextBlock x:Name="BlkNomes" HorizontalAlignment="Left" Height="30" Margin="260,503,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="130" IsEnabled="False"/>
+        <TextBlock x:Name="BlkCodigoAtt" HorizontalAlignment="Left" Height="30" Margin="420,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="182" IsEnabled="False" FontWeight="Bold" FontFamily="Microsoft Sans Serif" Visibility="Collapsed"><Run Text="CÓDIGO DO FUNCIONÁRIO"/></TextBlock>
+        <TextBox x:Name="TxtCodigoAtt" HorizontalAlignment="Left" Height="30" Margin="420,95,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="182" Visibility="Collapsed"/>
+        <Button x:Name="BtnFuncioAdd" Content="Adicionar" HorizontalAlignment="Left" Height="30" Margin="40,458,0,0" VerticalAlignment="Top" Width="80" Click="BtnFuncioAdd_Click" Visibility="Collapsed"/> 
+        <Button x:Name="BtnVerificarAtt" Content="Ok!" HorizontalAlignment="Left" Height="30" Margin="607,95,0,0" VerticalAlignment="Top" Width="45" Click="BtnVerificarAtt_Click" Visibility="Collapsed"/>
+        <TextBlock x:Name="BlkNomeAtt" HorizontalAlignment="Left" Height="30" Margin="420,145,0,0" TextWrapping="Wrap" Text="NOVO NOME " VerticalAlignment="Top" Width="182" IsEnabled="False" FontFamily="Microsoft Sans Serif" FontWeight="Bold" Visibility="Collapsed"/>
+        <TextBlock x:Name="BlkTurnoAtt" HorizontalAlignment="Left" Height="30" Margin="420,223,0,0" TextWrapping="Wrap" Text="NOVO TURNO " VerticalAlignment="Top" Width="182" FontFamily="Microsoft Sans Serif" FontWeight="Bold" IsEnabled="False" Visibility="Collapsed"/>
+        <TextBlock x:Name="BlkFuncaoAtt" HorizontalAlignment="Left" Height="30" Margin="420,308,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="182" IsEnabled="False" FontFamily="Microsoft Sans Serif" FontWeight="Bold" Text="NOVA FUNÇÃO " Visibility="Collapsed"/>
+        <TextBlock x:Name="BlkSalarioAtt" HorizontalAlignment="Left" Height="30" Margin="420,388,0,0" TextWrapping="Wrap" Text="NOVO SALÁRIO" VerticalAlignment="Top" Width="182" FontFamily="Microsoft Sans Serif" FontWeight="Bold" IsEnabled="False" Visibility="Collapsed"/>
+        <TextBox x:Name="TxtNomeAtt" HorizontalAlignment="Left" Height="30" Margin="420,175,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="182" Visibility="Collapsed"/>
+        <TextBox x:Name="TxtTurnoAtt" HorizontalAlignment="Left" Height="30" Margin="420,258,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="182" Visibility="Collapsed"/>
+        <TextBox x:Name="TxtFuncaoAtt" HorizontalAlignment="Left" Height="30" Margin="420,338,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="182" Visibility="Collapsed"/>
+        <TextBox x:Name="TxtSalarioAtt" HorizontalAlignment="Left" Height="30" Margin="420,423,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="182" Visibility="Collapsed"/>
+        <Button x:Name="BtnNomeAtt" Content="Ok!" HorizontalAlignment="Left" Height="30" Margin="607,175,0,0" VerticalAlignment="Top" Width="45" Click="BtnNomeAtt_Click" Visibility="Collapsed"/>
+        <Button x:Name="BtnTurnoAtt" Content="Ok!" HorizontalAlignment="Left" Height="30" Margin="607,258,0,0" VerticalAlignment="Top" Width="45" Click="BtnTurnoAtt_Click" Visibility="Collapsed"/>
+        <Button x:Name="BtnFuncaoAtt" Content="Ok!" HorizontalAlignment="Left" Height="30" Margin="607,338,0,0" VerticalAlignment="Top" Width="45" Visibility="Collapsed"/>
+        <Button x:Name="BtnSalarioAtt" Content="Ok!" HorizontalAlignment="Left" Height="30" Margin="607,423,0,0" VerticalAlignment="Top" Width="45" Visibility="Collapsed"/>
+        <Button x:Name="BtnAdicionarFun" Content="ADICIONAR FUNCIONÁRIO" HorizontalAlignment="Left" Height="55" Margin="40,70,0,0" VerticalAlignment="Top" Width="256" Click="BtnAdicionarFun_Click"/>
+        <Button x:Name="BtnAtualizarFun" Content="ATUALIZAR FUNCIONÁRIO" HorizontalAlignment="Left" Height="55" Margin="40,180,0,0" VerticalAlignment="Top" Width="256" Click="BtnAtualizarFun_Click"/>
+        <Button x:Name="BtnVisualizarFun" Content="VISUALIZAR FUNCIONÁRIO" HorizontalAlignment="Left" Height="55" Margin="40,293,0,0" VerticalAlignment="Top" Width="256"/>
+
     </Grid>
 </Window>
