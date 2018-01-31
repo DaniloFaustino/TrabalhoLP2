@@ -197,5 +197,33 @@ namespace NovaVersao
             BlkErros.Text = "Atualizado";
             BlkNomes.Text = "";
         }
+
+        private void BtnFuncaoAtt_Click(object sender, RoutedEventArgs e)
+        {
+            SqlConnection conex = new SqlConnection("Data Source = localhost; Initial Catalog = Restaurante; Integrated Security = SSPI;");
+            SqlCommand comd = new SqlCommand();
+            comd.Connection = conex;
+
+            if (TxtNomeAtt.Text == "")
+            {
+                BlkErros.Text = "Formato inválido";
+            }
+            else
+            {
+                BlkErros.Text = "";
+
+                comd.CommandText = Funcionalidade.AtualizarFuncionarioFuncao();
+                comd.Parameters.AddWithValue("Funcao", TxtFuncaoAtt.Text);
+                comd.Parameters.AddWithValue("Codigo", TxtCodigoAtt.Text);
+            }
+
+            conex.Open();
+            comd.ExecuteNonQuery();
+            conex.Close();
+
+
+            BlkErros.Text = "Atualizado";
+            BlkNomes.Text = "";
+        }
     }
 }

@@ -34,7 +34,7 @@
         <TextBox x:Name="TxtSalarioAtt" HorizontalAlignment="Left" Height="30" Margin="420,423,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="182" Visibility="Collapsed"/>
         <Button x:Name="BtnNomeAtt" Content="Ok!" HorizontalAlignment="Left" Height="30" Margin="607,175,0,0" VerticalAlignment="Top" Width="45" Click="BtnNomeAtt_Click" Visibility="Collapsed"/>
         <Button x:Name="BtnTurnoAtt" Content="Ok!" HorizontalAlignment="Left" Height="30" Margin="607,258,0,0" VerticalAlignment="Top" Width="45" Click="BtnTurnoAtt_Click" Visibility="Collapsed"/>
-        <Button x:Name="BtnFuncaoAtt" Content="Ok!" HorizontalAlignment="Left" Height="30" Margin="607,338,0,0" VerticalAlignment="Top" Width="45" Visibility="Collapsed"/>
+        <Button x:Name="BtnFuncaoAtt" Content="Ok!" HorizontalAlignment="Left" Height="30" Margin="607,338,0,0" VerticalAlignment="Top" Width="45" Click="BtnFuncaoAtt_Click" Visibility="Collapsed"/>
         <Button x:Name="BtnSalarioAtt" Content="Ok!" HorizontalAlignment="Left" Height="30" Margin="607,423,0,0" VerticalAlignment="Top" Width="45" Visibility="Collapsed"/>
         <Button x:Name="BtnAdicionarFun" Content="ADICIONAR FUNCIONÁRIO" HorizontalAlignment="Left" Height="55" Margin="40,70,0,0" VerticalAlignment="Top" Width="256" Click="BtnAdicionarFun_Click"/>
         <Button x:Name="BtnAtualizarFun" Content="ATUALIZAR FUNCIONÁRIO" HorizontalAlignment="Left" Height="55" Margin="40,180,0,0" VerticalAlignment="Top" Width="256" Click="BtnAtualizarFun_Click"/>

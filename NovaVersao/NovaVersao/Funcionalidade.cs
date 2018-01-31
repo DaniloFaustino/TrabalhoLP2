@@ -34,7 +34,7 @@ namespace NovaVersao
         }
         public static string AdicionarFuncionario()
         {
-            return "INSERT INTO FUNCIONARIO (Código, Nome) VALUES (@Codigo, @Nome)"; 
+            return "INSERT INTO FUNCIONARIO (Código, Nome) VALUES (@Codigo, @Nome)";
         }
         public static string AtualizarFuncionarioNome()
         {
@@ -43,6 +43,10 @@ namespace NovaVersao
         public static string AtualizarFuncionarioTurno()
         {
             return "UPDATE FUNCIONARIO SET TURNO = @Turno WHERE CÓDIGO = @Codigo";
+        }
+        public static string AtualizarFuncionarioFuncao()
+        {
+            return "UPDATE FUNCIONARIO SET FUNCAO = @Funcao WHERE CÓDIGO = @Codigo";
         }
     }
 }
