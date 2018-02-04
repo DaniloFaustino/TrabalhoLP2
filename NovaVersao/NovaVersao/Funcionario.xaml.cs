@@ -50,6 +50,7 @@ namespace NovaVersao
             SqlCommand comd = new SqlCommand();
             comd.Connection = conex;
 
+            
             if (TxtCodigoAdd.Text == "" || TxtNomeAdd.Text == "" || TxtFuncaoAdd.Text == "" || TxtTurnoAdd.Text == "" || TxtSalarioAdd.Text == "")
             {
                 BlkErros.Text = "Formato Inválido";
@@ -60,21 +61,26 @@ namespace NovaVersao
                 BlkErros.Text = "";
 
                 int sal = int.Parse(TxtSalarioAdd.Text);
+                string data = DateTime.Now.ToString("dd/MM/yyyy");
 
                 comd.CommandText = Funcionalidade.AdicionarFuncionario();
                 comd.Parameters.AddWithValue("Codigo", TxtCodigoAdd.Text);
                 comd.Parameters.AddWithValue("Nome", TxtNomeAdd.Text);
-                
-
-            }
-
-            conex.Open();
-            comd.ExecuteNonQuery();
-            conex.Close();
+                comd.Parameters.AddWithValue("Inicio", "08/10/2017");
+                comd.Parameters.AddWithValue("Status", '1');
+                comd.Parameters.AddWithValue("Funcao", TxtFuncaoAdd.Text);
+                comd.Parameters.AddWithValue("Salario", data);
+                comd.Parameters.AddWithValue("Turno", TxtTurnoAdd.Text);
 
 
-            BlkErros.Text = "Atualizado";
+                conex.Open();
+                comd.ExecuteNonQuery();
+                conex.Close();
 
+
+                BlkErros.Text = "Atualizado";
+             }
+           
         }
 
         private void BtnAtualizarFun_Click(object sender, RoutedEventArgs e)
@@ -159,15 +165,17 @@ namespace NovaVersao
                 comd.CommandText = Funcionalidade.AtualizarFuncionarioNome();
                 comd.Parameters.AddWithValue("Nome", TxtNomeAtt.Text);
                 comd.Parameters.AddWithValue("Codigo", TxtCodigoAtt.Text);
+
+                conex.Open();
+                comd.ExecuteNonQuery();
+                conex.Close();
+
+
+                BlkErros.Text = "Atualizado";
+                BlkNomes.Text = "";
             }
 
-            conex.Open();
-            comd.ExecuteNonQuery();
-            conex.Close();
-
-
-            BlkErros.Text = "Atualizado";
-            BlkNomes.Text = "";
+            
         }
 
         private void BtnTurnoAtt_Click(object sender, RoutedEventArgs e)
@@ -176,7 +184,7 @@ namespace NovaVersao
             SqlCommand comd = new SqlCommand();
             comd.Connection = conex;
 
-            if (TxtNomeAtt.Text == "")
+            if (TxtTurnoAtt.Text == "")
             {
                 BlkErros.Text = "Formato inválido";
             }
@@ -187,15 +195,17 @@ namespace NovaVersao
                 comd.CommandText = Funcionalidade.AtualizarFuncionarioTurno();
                 comd.Parameters.AddWithValue("Turno", TxtTurnoAtt.Text);
                 comd.Parameters.AddWithValue("Codigo", TxtCodigoAtt.Text);
+
+                conex.Open();
+                comd.ExecuteNonQuery();
+                conex.Close();
+
+
+                BlkErros.Text = "Atualizado";
+                BlkNomes.Text = "";
             }
 
-            conex.Open();
-            comd.ExecuteNonQuery();
-            conex.Close();
-
-
-            BlkErros.Text = "Atualizado";
-            BlkNomes.Text = "";
+            
         }
 
         private void BtnFuncaoAtt_Click(object sender, RoutedEventArgs e)
@@ -204,7 +214,7 @@ namespace NovaVersao
             SqlCommand comd = new SqlCommand();
             comd.Connection = conex;
 
-            if (TxtNomeAtt.Text == "")
+            if (TxtFuncaoAtt.Text == "")
             {
                 BlkErros.Text = "Formato inválido";
             }
@@ -215,15 +225,48 @@ namespace NovaVersao
                 comd.CommandText = Funcionalidade.AtualizarFuncionarioFuncao();
                 comd.Parameters.AddWithValue("Funcao", TxtFuncaoAtt.Text);
                 comd.Parameters.AddWithValue("Codigo", TxtCodigoAtt.Text);
+
+                conex.Open();
+                comd.ExecuteNonQuery();
+                conex.Close();
+
+
+                BlkErros.Text = "Atualizado";
+                BlkNomes.Text = "";
             }
 
-            conex.Open();
-            comd.ExecuteNonQuery();
-            conex.Close();
+            
+        }
+
+        private void BtnSalarioAtt_Click(object sender, RoutedEventArgs e)
+        {
+            SqlConnection conex = new SqlConnection("Data Source = localhost; Initial Catalog = Restaurante; Integrated Security = SSPI;");
+            SqlCommand comd = new SqlCommand();
+            comd.Connection = conex;
+
+            int sal = int.Parse(TxtSalarioAtt.Text);
+
+            if (TxtSalarioAtt.Text == "")
+            {
+                BlkErros.Text = "Formato inválido";
+            }
+            else
+            {
+                BlkErros.Text = "";
+
+               
+                comd.CommandText = Funcionalidade.AtualizarFuncionarioSalario();
+                comd.Parameters.AddWithValue("Salario", sal);
+                comd.Parameters.AddWithValue("Codigo", TxtCodigoAtt.Text);
+
+                conex.Open();
+                comd.ExecuteNonQuery();
+                conex.Close();
 
 
-            BlkErros.Text = "Atualizado";
-            BlkNomes.Text = "";
+                BlkErros.Text = "Atualizado";
+                BlkNomes.Text = "";
+            }           
         }
     }
 }

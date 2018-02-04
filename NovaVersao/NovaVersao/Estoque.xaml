@@ -5,8 +5,33 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NovaVersao"
         mc:Ignorable="d"
-        Title="Estoque" Height="300" Width="300">
-    <Grid>
-        
+        Title="Estoque" Height="450" Width="600">
+    <Grid HorizontalAlignment="Left" Width="592">
+        <TextBlock x:Name="BlkDesejo" Height="32" Margin="35,10,35,0" TextWrapping="Wrap" Text="O QUE DESEJA FAZER?" VerticalAlignment="Top" IsEnabled="False" FontFamily="Microsoft Sans Serif" FontSize="20" FontWeight="Bold" TextAlignment="Center"/>
+        <TextBlock x:Name="BlkNome" HorizontalAlignment="Left" Height="30" Margin="10,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="163" FontFamily="Microsoft Sans Serif" FontWeight="Bold" TextAlignment="Center" IsEnabled="False" Visibility="Collapsed"><Run Text="NOME DO PRODUTO"/></TextBlock>
+        <TextBox x:Name="TxtNome" HorizontalAlignment="Left" Height="25" Margin="10,103,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="163" Visibility="Collapsed"/>
+        <TextBlock x:Name="BlkTipo" HorizontalAlignment="Left" Height="30" Margin="10,144,0,0" TextWrapping="Wrap" Text="TIPO DO PRODUTO " VerticalAlignment="Top" Width="163" IsEnabled="False" TextAlignment="Center" FontFamily="Microsoft Sans Serif" FontWeight="Bold" Visibility="Collapsed"/>
+        <TextBox x:Name="TxtTipo" HorizontalAlignment="Left" Height="25" Margin="10,179,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="163" Visibility="Collapsed"/>
+        <TextBlock x:Name="BlkQuantidade" HorizontalAlignment="Left" Height="30" Margin="10,221,0,0" TextWrapping="Wrap" Text="QUANTIDADE EM ESTOQUE" VerticalAlignment="Top" Width="163" IsEnabled="False" FontFamily="Microsoft Sans Serif" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+        <TextBox x:Name="TxtQuantidade" HorizontalAlignment="Left" Height="25" Margin="10,256,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="163" Visibility="Collapsed"/>
+        <Button x:Name="BtnProdutoAdd" Content="ADICIONAR" HorizontalAlignment="Left" Height="25" Margin="178,256,0,0" VerticalAlignment="Top" Width="75" Click="BtnProdutoAdd_Click" Visibility="Collapsed"/>
+        <TextBlock x:Name="BlkErros" HorizontalAlignment="Left" Height="23" Margin="10,386,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" IsEnabled="False"/>
+        <TextBlock x:Name="BlkNomes" HorizontalAlignment="Left" Height="23" Margin="178,386,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="125" IsEnabled="False"/>
+        <TextBlock x:Name="BlkIdProduto" HorizontalAlignment="Left" Height="30" Margin="389,68,0,0" TextWrapping="Wrap" Text="ID DO PRODUTO" VerticalAlignment="Top" Width="150" IsEnabled="False" FontFamily="Microsoft Sans Serif" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+        <TextBox x:Name="TxtIdAtt" HorizontalAlignment="Left" Height="25" Margin="389,103,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Visibility="Collapsed"/>
+        <Button x:Name="BtnVerificarId" Content="Ok!" Height="25" Margin="544,103,19,0" VerticalAlignment="Top" RenderTransformOrigin="-0.044,1.371" Click="BtnVerificarId_Click" Visibility="Collapsed"/>
+        <TextBlock x:Name="BlkNomeAtt" HorizontalAlignment="Left" Height="30" Margin="389,144,0,0" TextWrapping="Wrap" Text="NOVO NOME" VerticalAlignment="Top" Width="150" IsEnabled="False" FontFamily="Microsoft Sans Serif" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+        <TextBlock x:Name="BlkTipoAtt" HorizontalAlignment="Left" Height="30" Margin="389,221,0,0" TextWrapping="Wrap" Text="NOVO TIPO" VerticalAlignment="Top" Width="150" IsEnabled="False" FontFamily="Microsoft Sans Serif" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+        <TextBox x:Name="TxtNomeAtt" HorizontalAlignment="Left" Height="30" Margin="389,174,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Visibility="Collapsed"/>
+        <TextBox x:Name="TxtTipoAtt" HorizontalAlignment="Left" Height="25" Margin="389,256,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Visibility="Collapsed"/>
+        <Button x:Name="BtnNomeAtt" Content="Ok!" HorizontalAlignment="Left" Height="25" Margin="544,179,0,0" VerticalAlignment="Top" Width="29" Click="BtnNomeAtt_Click" Visibility="Collapsed"/>
+        <Button x:Name="BtnTipoAtt" Content="Ok!" HorizontalAlignment="Left" Height="25" Margin="544,256,0,0" VerticalAlignment="Top" Width="29" Click="BtnTipoAtt_Click" Visibility="Collapsed"/>
+        <TextBlock x:Name="BlkQuantidadeAtt" HorizontalAlignment="Left" Height="30" Margin="389,299,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" IsEnabled="False" FontFamily="Microsoft Sans Serif" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"><Run Text="NOVA QUANTIDADE"/></TextBlock>
+        <TextBox x:Name="TxtQuantidadeAtt" HorizontalAlignment="Left" Height="25" Margin="389,329,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Visibility="Collapsed"/>
+        <Button x:Name="BtnQuantidadeAtt" Content="Ok!" HorizontalAlignment="Left" Height="25" Margin="544,329,0,0" VerticalAlignment="Top" Width="29" Click="BtnQuantidadeAtt_Click" Visibility="Collapsed"/>
+        <Button x:Name="BtnAdicionarProduto" Content="ADICIONAR PRODUTO" HorizontalAlignment="Left" Height="35" Margin="10,63,0,0" VerticalAlignment="Top" Width="138" Click="BtnAdicionarProduto_Click"/>
+        <Button x:Name="BtnAtualizarProduto" Content="ATUALIZAR PRODUTO" HorizontalAlignment="Left" Height="35" Margin="10,121,0,0" VerticalAlignment="Top" Width="138" Click="BtnAtualizarProduto_Click"/>
+        <Button x:Name="BtnVisualizarProduto" Content="VISUALIZAR PRODUTO" HorizontalAlignment="Left" Height="35" Margin="10,179,0,0" VerticalAlignment="Top" Width="138"/>
+
     </Grid>
 </Window>
