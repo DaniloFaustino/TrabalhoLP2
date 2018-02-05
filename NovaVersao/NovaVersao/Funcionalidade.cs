@@ -83,5 +83,41 @@ namespace NovaVersao
         {
             return "SELECT Id, Nome FROM ESTOQUE WHERE Id = @Id";
         }
+        public static string AdicionarConta()
+        {
+            return "INSERT INTO FATURAMENTO (Valor, Funcionario, Dia, Mês, Ano) VALUES (@Valor, @Funcionario, @Dia, @Mes, @Ano)";
+        }
+        public static string VerificarCodigoFaturamento()
+        {
+            return "SELECT Id FROM FATURAMENTO WHERE Id = @Codigo";
+        }
+        public static string AtualizarContaData()
+        {
+            return "UPDATE FATURAMENTO SET Dia = @Dia, Mês = @Mes, Ano = @Ano WHERE Id = @Id";
+        }
+        public static string AtualizarContaValor()
+        {
+            return "UPDATE FATURAMENTO SET VALOR = @Valor WHERE Id = @Id";
+        }
+        public static string AtualizarContaFuncionario()
+        {
+            return "UPDATE FATURAMENTO SET Funcionario = @Funcionario WHERE Id = @Id";
+        }
+        public static string VisualizarTodosGerentes()
+        {
+            return "SELECT Nome FROM Gerente";
+        }
+        public static string TamanhoTabelaGerente()
+        {
+            return "SELECT COUNT(Código) FROM Gerente";
+        }
+        public static string TamanhoTabelaGerenteTurno()
+        {
+            return "SELECT COUNT(Código) FROM FUNCIONARIO";
+        }
+        public static string VisualizarTurnosGerentes()
+        {
+            return "SELECT Nome FROM Funcionario WHERE Turno = @Turno";
+        }
     }
 }

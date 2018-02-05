@@ -227,5 +227,11 @@ namespace NovaVersao
                 
             }
         }
+
+        private void BtnVisualizarGerente_Click(object sender, RoutedEventArgs e)
+        {
+            VIsualizarGerente ger = new VIsualizarGerente();
+            ger.ShowDialog();
+        }
     }
 }

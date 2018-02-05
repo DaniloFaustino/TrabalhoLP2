@@ -5,8 +5,38 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NovaVersao"
         mc:Ignorable="d"
-        Title="Faturamento" Height="300" Width="300">
+        Title="Faturamento" Height="450" Width="600">
     <Grid>
-        
+        <TextBlock x:Name="BlkDesejo" Height="32" Margin="35,10,35,0" TextWrapping="Wrap" Text="O QUE DESEJA FAZER?" VerticalAlignment="Top" IsEnabled="False" FontFamily="Microsoft Sans Serif" FontSize="20" FontWeight="Bold" TextAlignment="Center"/>
+        <TextBlock x:Name="BlkDia" HorizontalAlignment="Left" Height="30" Margin="10,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="163" FontFamily="Microsoft Sans Serif" FontWeight="Bold" TextAlignment="Center" IsEnabled="False" Text="DATA DA CONTA" Visibility="Collapsed"/>
+        <TextBox x:Name="TxtDia" HorizontalAlignment="Left" Height="25" Margin="10,103,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60" Visibility="Collapsed"/>
+        <TextBlock x:Name="BlkValor" HorizontalAlignment="Left" Height="30" Margin="10,144,0,0" TextWrapping="Wrap" Text="VALOR DA CONTA" VerticalAlignment="Top" Width="163" IsEnabled="False" TextAlignment="Center" FontFamily="Microsoft Sans Serif" FontWeight="Bold" Visibility="Collapsed"/>
+        <TextBox x:Name="TxtValor" HorizontalAlignment="Left" Height="25" Margin="10,179,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="163" Visibility="Collapsed"/>
+        <TextBlock x:Name="BlkFuncionario" HorizontalAlignment="Left" Height="30" Margin="10,221,0,0" TextWrapping="Wrap" Text="FUNCIONÁRIO RESPONSÁVEL" VerticalAlignment="Top" Width="163" IsEnabled="False" FontFamily="Microsoft Sans Serif" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+        <TextBox x:Name="TxtFuncionario" HorizontalAlignment="Left" Height="25" Margin="10,256,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="163" Visibility="Collapsed"/>
+        <Button x:Name="BtnContaAdd" Content="ADICIONAR" HorizontalAlignment="Left" Height="25" Margin="178,256,0,0" VerticalAlignment="Top" Width="75" Click="BtnProdutoAdd_Click" Visibility="Collapsed"/>
+        <TextBlock x:Name="BlkErros" HorizontalAlignment="Left" Height="23" Margin="10,386,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" IsEnabled="False"/>
+        <TextBlock x:Name="BlkNomes" HorizontalAlignment="Left" Height="23" Margin="178,386,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="125" IsEnabled="False"/>
+
+        <TextBlock x:Name="BlkIdConta" HorizontalAlignment="Left" Height="30" Margin="389,68,0,0" TextWrapping="Wrap" Text="ID DA CONTA" VerticalAlignment="Top" Width="150" IsEnabled="False" FontFamily="Microsoft Sans Serif" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+        <TextBox x:Name="TxtIdAtt" HorizontalAlignment="Left" Height="25" Margin="389,103,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Visibility="Collapsed"/>
+        <Button x:Name="BtnVerificarId" Content="Ok!" Height="25" Margin="544,103,19,0" VerticalAlignment="Top" RenderTransformOrigin="-0.044,1.371" Click="BtnVerificarId_Click" Visibility="Collapsed"></Button>
+        <TextBlock x:Name="BlkDataAtt" HorizontalAlignment="Left" Height="30" Margin="389,144,0,0" TextWrapping="Wrap" Text="NOVA DATA" VerticalAlignment="Top" Width="150" IsEnabled="False" FontFamily="Microsoft Sans Serif" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+        <TextBlock x:Name="BlkValorAtt" HorizontalAlignment="Left" Height="30" Margin="389,221,0,0" TextWrapping="Wrap" Text="NOVO VALOR" VerticalAlignment="Top" Width="150" IsEnabled="False" FontFamily="Microsoft Sans Serif" FontWeight="Bold" TextAlignment="Center" Visibility="Collapsed"/>
+        <TextBox x:Name="TxtDiaAtt" HorizontalAlignment="Left" Height="25" Margin="389,179,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" Visibility="Collapsed"/>
+        <TextBox x:Name="TxtValorAtt" HorizontalAlignment="Left" Height="25" Margin="389,256,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Visibility="Collapsed"/>
+        <Button x:Name="BtnDataAtt" Content="Ok!" HorizontalAlignment="Left" Height="25" Margin="544,179,0,0" VerticalAlignment="Top" Width="29" Click="BtnDataAtt_Click" Visibility="Collapsed" ></Button>
+        <Button x:Name="BtnValorAtt" Content="Ok!" HorizontalAlignment="Left" Height="25" Margin="544,256,0,0" VerticalAlignment="Top" Width="29" Click="BtnValorAtt_Click" Visibility="Collapsed" ></Button>
+        <TextBlock x:Name="BlkFuncionarioAtt" HorizontalAlignment="Left" Height="30" Margin="389,299,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" IsEnabled="False" FontFamily="Microsoft Sans Serif" FontWeight="Bold" TextAlignment="Center" Text="NOVO FUNCIONÁRIO" Visibility="Collapsed"/>
+        <TextBox x:Name="TxtFuncionarioAtt" HorizontalAlignment="Left" Height="25" Margin="389,329,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Visibility="Collapsed"/>
+        <Button x:Name="BtnFuncionarioAtt" Content="Ok!" HorizontalAlignment="Left" Height="25" Margin="544,329,0,0" VerticalAlignment="Top" Width="29" Click="BtnFuncionarioAtt_Click" Visibility="Collapsed"></Button>
+        <TextBox x:Name="TxtMes" HorizontalAlignment="Left" Height="25" Margin="75,103,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60" Visibility="Collapsed"/>
+        <TextBox x:Name="TxtAno" HorizontalAlignment="Left" Height="25" Margin="140,103,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60" Visibility="Collapsed"/>
+        <TextBox x:Name="TxtMesAtt" HorizontalAlignment="Left" Height="25" Margin="439,179,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" Visibility="Collapsed"/>
+        <TextBox x:Name="TxtAnoAtt" HorizontalAlignment="Left" Height="25" Margin="489,179,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" Visibility="Collapsed"/>
+
+        <Button x:Name="BtnAdicionarConta" Content="ADICIONAR CONTA" HorizontalAlignment="Left" Height="35" Margin="10,63,0,0" VerticalAlignment="Top" Width="138" Click="BtnAdicionarProduto_Click"/>
+        <Button x:Name="BtnAtualizarConta" Content="ATUALIZAR CONTA" HorizontalAlignment="Left" Height="35" Margin="10,121,0,0" VerticalAlignment="Top" Width="138" Click="BtnAtualizarProduto_Click"/>
+        <Button x:Name="BtnVisualizarConta" Content="VISUALIZAR CONTA" HorizontalAlignment="Left" Height="35" Margin="10,179,0,0" VerticalAlignment="Top" Width="138"/>
     </Grid>
 </Window>

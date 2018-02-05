@@ -5,8 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NovaVersao"
         mc:Ignorable="d"
-        Title="VIsualizarGerente" Height="300" Width="300">
+        Title="VIsualizarGerente" Height="300" Width="600">
     <Grid>
-        
+        <TextBlock x:Name="BlkFazendo" Height="27" Margin="10,10,10,0" TextWrapping="Wrap" Text="VISUALIZANDO GERENTE" VerticalAlignment="Top" FontFamily="Microsoft Sans Serif" FontSize="20" FontWeight="Bold" TextAlignment="Center"/>
+        <Button x:Name="BtnVisuTodos" Content="VISUALIZAR TODOS OS GERENTES" HorizontalAlignment="Left" Height="30" Margin="10,56,0,0" VerticalAlignment="Top" Width="190" Click="BtnVisuTodos_Click"/>
+        <ListBox x:Name="LstTodos" HorizontalAlignment="Left" Height="100" Margin="10,91,0,0" VerticalAlignment="Top" Width="190"/>
+        <Button x:Name="BtnVisualizarTurno" Content="VISUALIZAR TURNOS" HorizontalAlignment="Left" Height="30" Margin="324,56,0,0" VerticalAlignment="Top" Width="130" Click="BtnVisualizarTurno_Click"/>
+        <ListBox x:Name="LstTurnos" HorizontalAlignment="Left" Height="100" Margin="221,91,0,0" VerticalAlignment="Top" Width="233" SelectionChanged="listBox_SelectionChanged"/>
+        <TextBox x:Name="TxtTurno" HorizontalAlignment="Left" Height="30" Margin="221,56,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="98"/>
     </Grid>
 </Window>

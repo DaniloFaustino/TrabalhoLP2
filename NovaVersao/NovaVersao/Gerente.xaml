@@ -16,7 +16,7 @@
         <Button x:Name="BtnRegistro" Content="Registrar" HorizontalAlignment="Left" Height="30" Margin="10,182,0,0" VerticalAlignment="Top" Width="70" Click="BtnRegistro_Click" Visibility="Collapsed"/>
         <TextBlock x:Name="BlkErrosInfos" HorizontalAlignment="Left" Height="29" Margin="10,230,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="152" IsEnabled="False"/>
         <Button x:Name="BtnAtualizarGerente" Content="ATUALIZAR GERENTE" HorizontalAlignment="Left" Height="30" Margin="10,112,0,0" VerticalAlignment="Top" Width="140" Click="BtnAtualizarGerente_Click"/>
-        <Button x:Name="BtnVisualizarGerente" Content="VISUALIZAR GERENTE" HorizontalAlignment="Left" Height="30" Margin="10,152,0,0" VerticalAlignment="Top" Width="140"/>
+        <Button x:Name="BtnVisualizarGerente" Content="VISUALIZAR GERENTE" HorizontalAlignment="Left" Height="30" Margin="10,152,0,0" VerticalAlignment="Top" Width="140" Click="BtnVisualizarGerente_Click"/>
         <PasswordBox x:Name="PswSenhaAcesso" HorizontalAlignment="Left" Height="30" Margin="10,152,0,0" VerticalAlignment="Top" Width="140" Visibility="Collapsed"/>
         <TextBlock x:Name="BklNomes" HorizontalAlignment="Left" Height="29" Margin="167,230,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="115" IsEnabled="False"/>
         <TextBlock x:Name="BlkCódigoGerente" HorizontalAlignment="Left" Height="25" Margin="305,45,0,0" TextWrapping="Wrap" Text="CÓDIGO DO GERENTE" VerticalAlignment="Top" Width="138" FontWeight="Bold" TextAlignment="Center" IsEnabled="False" Visibility="Collapsed"/>

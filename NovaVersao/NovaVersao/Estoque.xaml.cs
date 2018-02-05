@@ -19,7 +19,8 @@ namespace NovaVersao
     /// Interaction logic for Estoque.xaml
     /// </summary>
     public partial class Estoque : Window
-    {
+    { 
+
         public Estoque()
         {
             InitializeComponent();
