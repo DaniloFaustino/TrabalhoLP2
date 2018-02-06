@@ -131,9 +131,9 @@ namespace NovaVersao
 
             for (int a = 0; a < total; a++)
             {
-                LstId.Items.Add(id[a]);
-                LstNome.Items.Add(nome[a]);
-                LstQtd.Items.Add(qtd[a]);
+                LstIdTipo.Items.Add(id[a]);
+                LstNomeTipo.Items.Add(nome[a]);
+                LstQtdTipo.Items.Add(qtd[a]);
             }
         }
 

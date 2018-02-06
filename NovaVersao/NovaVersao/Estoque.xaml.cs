@@ -89,7 +89,7 @@ namespace NovaVersao
 
             if (TxtIdAtt.Text == "")
             {
-                BlkErros.Text = "Funcionário não encontrado";
+                BlkErros.Text = "Produto não encontrado";
             }
             else
             {
@@ -115,13 +115,13 @@ namespace NovaVersao
 
                 if (id == 0)
                 {
-                    BlkErros.Text = "Funcionário não encontrado";
+                    BlkErros.Text = "Produto não encontrado";
                     TxtIdAtt.Text = "";
                 }
 
                 else
                 {
-                    BlkErros.Text = "Funcionário encontrado:";
+                    BlkErros.Text = "Produto encontrado:";
                     BlkNomeAtt.Visibility = System.Windows.Visibility.Visible;
                     TxtNomeAtt.Visibility = System.Windows.Visibility.Visible;
                     BtnNomeAtt.Visibility = System.Windows.Visibility.Visible;
