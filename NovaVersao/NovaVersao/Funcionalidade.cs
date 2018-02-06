@@ -113,11 +113,27 @@ namespace NovaVersao
         }
         public static string TamanhoTabelaGerenteTurno()
         {
-            return "SELECT COUNT(Código) FROM FUNCIONARIO";
+            return "SELECT COUNT(Turno) FROM FUNCIONARIO WHERE Funcao = 'Gerente'";
         }
         public static string VisualizarTurnosGerentes()
         {
-            return "SELECT Nome FROM Funcionario WHERE Turno = @Turno";
+            return "SELECT Nome FROM Funcionario WHERE Turno = @Turno AND Funcao = 'Gerente'";
+        }
+        public static string TamanhoTabelaFuncionario()
+        {
+            return "SELECT COUNT(Código) FROM Funcionario";
+        }
+        public static string VisualizarTodosFuncionarios()
+        {
+            return "SELECT Nome, Funcao, Código FROM Funcionario";
+        }
+        public static string TamanhoTabelaFuncionarioFuncao()
+        {
+            return "SELECT COUNT(Id) FROM Funcionario WHERE Funcao = @Funcao";
+        }
+        public static string VisualizarFuncaoFuncionario()
+        {
+            return "SELECT Nome, Código FROM Funcionario WHERE Funcao = @Funcao'";
         }
     }
 }

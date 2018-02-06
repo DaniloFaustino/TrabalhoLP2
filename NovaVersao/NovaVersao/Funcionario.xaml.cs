@@ -268,5 +268,11 @@ namespace NovaVersao
                 BlkNomes.Text = "";
             }           
         }
+
+        private void BtnVisualizarFun_Click(object sender, RoutedEventArgs e)
+        {
+            VisualizarFuncionario visu = new VisualizarFuncionario();
+            visu.ShowDialog();
+        }
     }
 }

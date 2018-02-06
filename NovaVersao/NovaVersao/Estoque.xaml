@@ -31,7 +31,7 @@
         <Button x:Name="BtnQuantidadeAtt" Content="Ok!" HorizontalAlignment="Left" Height="25" Margin="544,329,0,0" VerticalAlignment="Top" Width="29" Click="BtnQuantidadeAtt_Click" Visibility="Collapsed"/>
         <Button x:Name="BtnAdicionarProduto" Content="ADICIONAR PRODUTO" HorizontalAlignment="Left" Height="35" Margin="10,63,0,0" VerticalAlignment="Top" Width="138" Click="BtnAdicionarProduto_Click"/>
         <Button x:Name="BtnAtualizarProduto" Content="ATUALIZAR PRODUTO" HorizontalAlignment="Left" Height="35" Margin="10,121,0,0" VerticalAlignment="Top" Width="138" Click="BtnAtualizarProduto_Click"/>
-        <Button x:Name="BtnVisualizarProduto" Content="VISUALIZAR PRODUTO" HorizontalAlignment="Left" Height="35" Margin="10,179,0,0" VerticalAlignment="Top" Width="138"/>
+        <Button x:Name="BtnVisualizarProduto" Content="VISUALIZAR PRODUTO" HorizontalAlignment="Left" Height="35" Margin="10,179,0,0" VerticalAlignment="Top" Width="138" Click="BtnVisualizarProduto_Click"/>
 
     </Grid>
 </Window>

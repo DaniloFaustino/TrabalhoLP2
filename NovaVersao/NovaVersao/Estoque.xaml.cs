@@ -221,5 +221,11 @@ namespace NovaVersao
                 BlkNomes.Text = "";
             }
         }
+
+        private void BtnVisualizarProduto_Click(object sender, RoutedEventArgs e)
+        {
+            VisualizarEstoque est = new VisualizarEstoque();
+            est.ShowDialog();
+        }
     }
 }

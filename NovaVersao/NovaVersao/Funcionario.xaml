@@ -38,7 +38,7 @@
         <Button x:Name="BtnSalarioAtt" Content="Ok!" HorizontalAlignment="Left" Height="30" Margin="607,423,0,0" VerticalAlignment="Top" Width="45" Click="BtnSalarioAtt_Click" Visibility="Collapsed"/>
         <Button x:Name="BtnAdicionarFun" Content="ADICIONAR FUNCIONÁRIO" HorizontalAlignment="Left" Height="55" Margin="40,70,0,0" VerticalAlignment="Top" Width="256" Click="BtnAdicionarFun_Click"/>
         <Button x:Name="BtnAtualizarFun" Content="ATUALIZAR FUNCIONÁRIO" HorizontalAlignment="Left" Height="55" Margin="40,180,0,0" VerticalAlignment="Top" Width="256" Click="BtnAtualizarFun_Click"/>
-        <Button x:Name="BtnVisualizarFun" Content="VISUALIZAR FUNCIONÁRIO" HorizontalAlignment="Left" Height="55" Margin="40,293,0,0" VerticalAlignment="Top" Width="256"/>
+        <Button x:Name="BtnVisualizarFun" Content="VISUALIZAR FUNCIONÁRIO" HorizontalAlignment="Left" Height="55" Margin="40,293,0,0" VerticalAlignment="Top" Width="256" Click="BtnVisualizarFun_Click"/>
 
     </Grid>
 </Window>

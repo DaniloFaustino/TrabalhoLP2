@@ -1,0 +1,20 @@
+﻿<Window x:Class="NovaVersao.VisualizarFuncionario"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NovaVersao"
+        mc:Ignorable="d"
+        Title="VisualizarFuncionario" Height="300" Width="600">
+    <Grid>
+        <TextBlock x:Name="BlkFazendo" Height="35" Margin="10,10,10,0" TextWrapping="Wrap" Text="VISUALIZANDO FUNCIONÁRIO " VerticalAlignment="Top" IsEnabled="False" FontFamily="Microsoft Sans Serif" FontSize="20" FontWeight="Bold" TextAlignment="Center"/>
+        <Button x:Name="BtnVisuTodos" Content="VISUALIZAR TODOS " HorizontalAlignment="Left" Height="22" Margin="10,62,0,0" VerticalAlignment="Top" Width="170" Click="BtnVisuTodos_Click"/>
+        <ListBox x:Name="LstNome" HorizontalAlignment="Left" Height="125" Margin="110,84,0,0" VerticalAlignment="Top" Width="110" RenderTransformOrigin="1.192,0.512"/>
+        <ListBox x:Name="LstFuncao" HorizontalAlignment="Left" Height="125" Margin="220,84,0,0" VerticalAlignment="Top" Width="110"/>
+        <ListBox x:Name="LstCodigo" HorizontalAlignment="Left" Height="125" Margin="10,84,0,0" VerticalAlignment="Top" Width="100"/>
+        <TextBox x:Name="TxtFuncao" HorizontalAlignment="Left" Height="22" Margin="364,62,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="91"/>
+        <Button x:Name="BtnVisuFuncao" Content="VISUALIZAR FUNÇÃO " HorizontalAlignment="Left" Height="22" Margin="460,62,0,0" VerticalAlignment="Top" Width="122" Click="BtnVisuFuncao_Click"/>
+        <ListBox x:Name="LstCodigo1" HorizontalAlignment="Left" Height="120" Margin="364,89,0,0" VerticalAlignment="Top" Width="91"/>
+        <ListBox x:Name="LstNomeFuncao" HorizontalAlignment="Left" Height="120" Margin="460,89,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="listBox1_SelectionChanged"/>
+    </Grid>
+</Window>

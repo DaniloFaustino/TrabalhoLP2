@@ -16,11 +16,11 @@ using System.Data.SqlClient;
 namespace NovaVersao
 {
     /// <summary>
-    /// Interaction logic for VIsualizarGerente.xaml
+    /// Interaction logic for VisualizarFuncionario.xaml
     /// </summary>
-    public partial class VIsualizarGerente : Window
+    public partial class VisualizarFuncionario : Window
     {
-        public VIsualizarGerente()
+        public VisualizarFuncionario()
         {
             InitializeComponent();
         }
@@ -31,7 +31,7 @@ namespace NovaVersao
             SqlCommand comd = new SqlCommand();
             comd.Connection = conex;
 
-            comd.CommandText = Funcionalidade.TamanhoTabelaGerente();
+            comd.CommandText = Funcionalidade.TamanhoTabelaFuncionario();
 
             comd.Connection.Open();
             SqlDataReader reader = comd.ExecuteReader();
@@ -40,8 +40,8 @@ namespace NovaVersao
             {
                 while (reader.Read())
                 {
-                    total = reader.GetInt32(0); 
-                    
+                    total = reader.GetInt32(0);
+
                 }
             }
             reader.Close();
@@ -50,16 +50,20 @@ namespace NovaVersao
 
             int i = 0;
 
-            comd.CommandText = Funcionalidade.VisualizarTodosGerentes();
+            comd.CommandText = Funcionalidade.VisualizarTodosFuncionarios();
 
             comd.Connection.Open();
             SqlDataReader leitor = comd.ExecuteReader();
             string[] codigo = new string[total];
+            string[] funcao = new string[total];
+            string[] cod = new string[total];
             if (leitor.HasRows)
-            { 
+            {
                 while (leitor.Read())
                 {
                     codigo[i] = leitor.GetString(0);
+                    funcao[i] = leitor.GetString(1);
+                    cod[i] = leitor.GetString(2); 
                     i++;
                 }
             }
@@ -68,19 +72,26 @@ namespace NovaVersao
 
             for (int a = 0; a < total; a++)
             {
-                LstTodos.Items.Add(codigo[a]);
+                LstNome.Items.Add(codigo[a]);
+                LstFuncao.Items.Add(funcao[a]);
+                LstCodigo.Items.Add(cod[a]); 
             }
+        }
+
+        private void listBox1_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
 
         }
 
-        private void BtnVisualizarTurno_Click(object sender, RoutedEventArgs e)
+        private void BtnVisuFuncao_Click(object sender, RoutedEventArgs e)
         {
             SqlConnection conex = new SqlConnection("Data Source = localhost; Initial Catalog = Restaurante; Integrated Security = SSPI;");
             SqlCommand comd = new SqlCommand();
             comd.Connection = conex;
 
-            comd.CommandText = Funcionalidade.TamanhoTabelaGerenteTurno();
-            
+            comd.CommandText = Funcionalidade.TamanhoTabelaFuncionarioFuncao();
+            comd.Parameters.AddWithValue("Funcao", TxtFuncao.Text);
+
 
 
             comd.Connection.Open();
@@ -99,16 +110,18 @@ namespace NovaVersao
 
             int i = 0;
 
-            comd.CommandText = Funcionalidade.VisualizarTurnosGerentes();
-            comd.Parameters.AddWithValue("Turno", TxtTurno.Text);
+            comd.CommandText = Funcionalidade.VisualizarFuncaoFuncionario();
+            comd.Parameters.AddWithValue("Funcao", TxtFuncao.Text);
 
             comd.Connection.Open();
             SqlDataReader leitor = comd.ExecuteReader();
             string[] codigo = new string[total];
+            string[] nome = new string[total];
             if (leitor.HasRows)
             {
                 while (leitor.Read())
                 {
+                    nome[i] = leitor.GetString(1);
                     codigo[i] = leitor.GetString(0);
                     i++;
                 }
@@ -118,13 +131,9 @@ namespace NovaVersao
 
             for (int a = 0; a < total; a++)
             {
-                LstTurnos.Items.Add(codigo[a]);
+                LstNomeFuncao.Items.Add(nome[a]);
+                LstCodigo1.Items.Add(codigo[a]);
             }
-        }
-
-        private void listBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
         }
     }
 }
