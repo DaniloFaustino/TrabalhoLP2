@@ -224,5 +224,11 @@ namespace NovaVersao
                 BlkNomes.Text = "";
             }
         }
+
+        private void BtnVisualizarConta_Click(object sender, RoutedEventArgs e)
+        {
+            VisualizarFaturamento fat = new VisualizarFaturamento();
+            fat.ShowDialog(); 
+        }
     }
 }

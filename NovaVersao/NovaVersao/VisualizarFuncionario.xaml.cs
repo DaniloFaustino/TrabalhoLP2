@@ -126,7 +126,7 @@ namespace NovaVersao
                     i++;
                 }
             }
-            reader.Close();
+            leitor.Close();
             comd.Connection.Close();
 
             for (int a = 0; a < total; a++)

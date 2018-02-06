@@ -135,5 +135,29 @@ namespace NovaVersao
         {
             return "SELECT Nome, Código FROM Funcionario WHERE Funcao = @Funcao'";
         }
+        public static string TamanhoTabelaEstoque()
+        {
+            return "SELECT COUNT(Id) FROM Estoque";
+        }
+        public static string VisualizarTodoEstoque()
+        {
+            return "SELECT Id, Nome, Quantidade FROM Estoque";
+        }
+        public static string TamanhoTabelaEstoqueTipo()
+        {
+            return "SELECT COUNT(Id) FROM ESTOQUE WHERE Tipo = @Tipo";
+        }
+        public static string VisualizarTipoEstoque()
+        {
+            return "SELECT Id, Nome, Quantidade FROM ESTOQUE WHERE Tipo = @Tipo'";
+        }
+        public static string VisualizarConta()
+        {
+            return "SELECT Valor, Funcionario, Dia, Mês, Ano FROM Faturamento";
+        }
+        public static string VisualizarSoma()
+        {
+            return "SELECT SUM(Valor), Id FROM Faturamento WHERE Mês LIKE @Mês GROUP BY Id";
+        }
     }
 }

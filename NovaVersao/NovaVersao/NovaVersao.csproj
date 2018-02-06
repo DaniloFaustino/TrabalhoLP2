@@ -58,6 +58,9 @@
     <Compile Include="VisualizarEstoque.xaml.cs">
       <DependentUpon>VisualizarEstoque.xaml</DependentUpon>
     </Compile>
+    <Compile Include="VisualizarFaturamento.xaml.cs">
+      <DependentUpon>VisualizarFaturamento.xaml</DependentUpon>
+    </Compile>
     <Compile Include="VisualizarFuncionario.xaml.cs">
       <DependentUpon>VisualizarFuncionario.xaml</DependentUpon>
     </Compile>
@@ -110,6 +113,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="VisualizarEstoque.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VisualizarFaturamento.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

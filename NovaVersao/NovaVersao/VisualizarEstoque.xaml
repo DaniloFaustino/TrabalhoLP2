@@ -7,6 +7,16 @@
         mc:Ignorable="d"
         Title="VisualizarEstoque" Height="300" Width="600">
     <Grid>
-        
+        <TextBlock x:Name="BlkFazendo" Height="35" Margin="10,10,10,0" TextWrapping="Wrap" Text="VISUALIZANDO ESTOQUE" VerticalAlignment="Top" IsEnabled="False" FontSize="20" FontFamily="Microsoft Sans Serif" FontWeight="Bold" TextAlignment="Center"/>
+        <Button x:Name="BtnTodos" Content="VISUALIZAR TODOS" HorizontalAlignment="Left" Height="35" Margin="10,50,0,0" VerticalAlignment="Top" Width="135" Click="BtnTodos_Click"/>
+        <ListBox x:Name="LstId" HorizontalAlignment="Left" Height="80" Margin="10,90,0,0" VerticalAlignment="Top" Width="60"/>
+        <ListBox x:Name="LstNome" HorizontalAlignment="Left" Height="80" Margin="70,90,0,0" VerticalAlignment="Top" Width="75"/>
+        <ListBox x:Name="LstQtd" HorizontalAlignment="Left" Height="80" Margin="145,90,0,0" VerticalAlignment="Top" Width="45"/>
+        <TextBox x:Name="TxtTipo" HorizontalAlignment="Left" Height="35" Margin="267,50,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="110"/>
+        <Button x:Name="BtnTipo" Content="Button" HorizontalAlignment="Left" Height="35" Margin="382,50,0,0" VerticalAlignment="Top" Width="82" Click="BtnTipo_Click"/>
+        <ListBox x:Name="LstIdTipo" HorizontalAlignment="Left" Height="80" Margin="267,90,0,0" VerticalAlignment="Top" Width="60"/>
+        <ListBox x:Name="LstNomeTipo" HorizontalAlignment="Left" Height="80" Margin="332,90,0,0" VerticalAlignment="Top" Width="70"/>
+        <ListBox x:Name="LstQtdTipo" HorizontalAlignment="Left" Height="80" Margin="407,90,0,0" VerticalAlignment="Top" Width="57"/>
+
     </Grid>
 </Window>

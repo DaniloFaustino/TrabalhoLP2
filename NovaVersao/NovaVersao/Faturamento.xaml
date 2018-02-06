@@ -37,6 +37,6 @@
 
         <Button x:Name="BtnAdicionarConta" Content="ADICIONAR CONTA" HorizontalAlignment="Left" Height="35" Margin="10,63,0,0" VerticalAlignment="Top" Width="138" Click="BtnAdicionarProduto_Click"/>
         <Button x:Name="BtnAtualizarConta" Content="ATUALIZAR CONTA" HorizontalAlignment="Left" Height="35" Margin="10,121,0,0" VerticalAlignment="Top" Width="138" Click="BtnAtualizarProduto_Click"/>
-        <Button x:Name="BtnVisualizarConta" Content="VISUALIZAR CONTA" HorizontalAlignment="Left" Height="35" Margin="10,179,0,0" VerticalAlignment="Top" Width="138"/>
+        <Button x:Name="BtnVisualizarConta" Content="VISUALIZAR CONTA" HorizontalAlignment="Left" Height="35" Margin="10,179,0,0" VerticalAlignment="Top" Width="138" Click="BtnVisualizarConta_Click"/>
     </Grid>
 </Window>
