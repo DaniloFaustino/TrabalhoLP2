@@ -103,6 +103,9 @@ namespace NovaVersao
             reader.Close();
             comd.Connection.Close();
 
+            comd.CommandText = Funcionalidade.TamanhoTabelaEstoqueTipo();
+            comd.Parameters.RemoveAt("Tipo");
+
             int i = 0;  
 
             comd.CommandText = Funcionalidade.VisualizarTipoEstoque();

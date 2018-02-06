@@ -108,6 +108,9 @@ namespace NovaVersao
             reader.Close();
             comd.Connection.Close();
 
+            comd.CommandText = Funcionalidade.TamanhoTabelaFuncionarioFuncao();
+            comd.Parameters.RemoveAt("Funcao");
+
             int i = 0;
 
             comd.CommandText = Funcionalidade.VisualizarFuncaoFuncionario();

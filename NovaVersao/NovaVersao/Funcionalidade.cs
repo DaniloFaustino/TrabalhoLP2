@@ -35,7 +35,7 @@ namespace NovaVersao
 
         public static string AtualizarGerente()
         {
-            return "UPDATE GERENTE SET SENHA = @Senha WHERE CÓDIGO = @Código)";
+            return "UPDATE GERENTE SET SENHA = @Senha WHERE CÓDIGO = @Código";
         }
 
         public static string AdicionarFuncionario()
@@ -133,7 +133,7 @@ namespace NovaVersao
         }
         public static string VisualizarFuncaoFuncionario()
         {
-            return "SELECT Nome, Código FROM Funcionario WHERE Funcao = @Funcao'";
+            return "SELECT Nome, Código FROM Funcionario WHERE Funcao = @Funcao";
         }
         public static string TamanhoTabelaEstoque()
         {
@@ -149,7 +149,7 @@ namespace NovaVersao
         }
         public static string VisualizarTipoEstoque()
         {
-            return "SELECT Id, Nome, Quantidade FROM Estoque WHERE Tipo = @Tipo'";
+            return "SELECT Id, Nome, Quantidade FROM Estoque WHERE Tipo = @Tipo";
         }
         public static string VisualizarConta()
         {
