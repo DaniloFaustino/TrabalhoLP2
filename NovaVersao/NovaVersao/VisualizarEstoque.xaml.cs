@@ -103,7 +103,7 @@ namespace NovaVersao
             reader.Close();
             comd.Connection.Close();
 
-            int i = 0;
+            int i = 0;  
 
             comd.CommandText = Funcionalidade.VisualizarTipoEstoque();
             comd.Parameters.AddWithValue("Tipo", TxtTipo.Text);

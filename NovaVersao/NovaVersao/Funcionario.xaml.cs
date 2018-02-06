@@ -69,7 +69,7 @@ namespace NovaVersao
                 comd.Parameters.AddWithValue("Inicio", "08/10/2017");
                 comd.Parameters.AddWithValue("Status", '1');
                 comd.Parameters.AddWithValue("Funcao", TxtFuncaoAdd.Text);
-                comd.Parameters.AddWithValue("Salario", data);
+                comd.Parameters.AddWithValue("Salario", sal); 
                 comd.Parameters.AddWithValue("Turno", TxtTurnoAdd.Text);
 
 

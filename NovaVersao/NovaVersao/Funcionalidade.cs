@@ -20,7 +20,7 @@ namespace NovaVersao
 
         public static string RegistrarGerente()
         {
-            return string.Format("INSERT INTO GERENTE (Código, Senha, Nome) VALUES (@Código, @Senha, @Nome);" + "UPDATE FUNCIONÁRIO SET FUNCAO = 'Gerente' WHERE CÓDIGO = @Código");
+            return string.Format("INSERT INTO GERENTE (Código, Senha, Nome) VALUES (@Código, @Senha, @Nome);" + "UPDATE FUNCIONARIO SET FUNCAO = 'Gerente' WHERE CÓDIGO = @Código");
         }
 
         public static string VerificarCodigoAtualizacaoGerente()
@@ -149,7 +149,7 @@ namespace NovaVersao
         }
         public static string VisualizarTipoEstoque()
         {
-            return "SELECT Id, Nome, Quantidade FROM ESTOQUE WHERE Tipo = @Tipo'";
+            return "SELECT Id, Nome, Quantidade FROM Estoque WHERE Tipo = @Tipo'";
         }
         public static string VisualizarConta()
         {
@@ -157,7 +157,7 @@ namespace NovaVersao
         }
         public static string VisualizarSoma()
         {
-            return "SELECT SUM(Valor), Id FROM Faturamento WHERE Mês LIKE @Mês GROUP BY Id";
+            return "SELECT SUM(Valor) FROM Faturamento WHERE Mês = @Mês AND Ano = @Ano GROUP BY Valor";
         }
     }
 }

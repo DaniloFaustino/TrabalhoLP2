@@ -204,27 +204,33 @@ namespace NovaVersao
                 reader.Close();
                 comd.Connection.Close();
 
-                
-
-                if (senha == PswAtual.Password)
+                try
                 {
-                    comd.CommandText = Funcionalidade.AtualizarGerente();
-                    comd.Parameters.AddWithValue("Senha", PswNovaSenha.Password);
-                    comd.Parameters.AddWithValue("Código", TxtCodigoGerente.Text);
 
-                    conex.Open();
-                    comd.ExecuteNonQuery();
-                    conex.Close();
+                    if (senha == PswAtual.Password)
+                    {
+                        comd.CommandText = Funcionalidade.AtualizarGerente();
+                        comd.Parameters.AddWithValue("Senha", PswNovaSenha.Password);
+                        comd.Parameters.AddWithValue("Código", TxtCodigoGerente.Text);
 
-                    BlkErrosInfos.Text = "Atualizado!";
-                    BklNomes.Text = "";
+                        conex.Open();
+                        comd.ExecuteNonQuery();
+                        conex.Close();
+
+                        BlkErrosInfos.Text = "Atualizado!";
+                        BklNomes.Text = "";
+                    }
+                    else
+                    {
+                        BlkErrosInfos.Text = "Senha Inválida";
+                        BklNomes.Text = "";
+                    }
                 }
-                else
+                catch (Exception err)
                 {
-                    BlkErrosInfos.Text = "Senha Inválida";
-                    BklNomes.Text = "";
+                    MessageBox.Show(err.Message);
                 }
-                
+
             }
         }
 

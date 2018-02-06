@@ -86,26 +86,37 @@ namespace NovaVersao
             comd.Connection = conex;
 
             comd.CommandText = Funcionalidade.VisualizarSoma();
-            comd.Parameters.AddWithValue("Mês", TxtMes);
+            comd.Parameters.AddWithValue("Mês", TxtMes.Text);
+            comd.Parameters.AddWithValue("Ano", TxtAno.Text);
 
-            
+
             comd.Connection.Open();
-            SqlDataReader leitor = comd.ExecuteReader();
-            int valor = 0;
-           
-            if (leitor.HasRows)
+
+            try
             {
-                while (leitor.Read())
+                SqlDataReader leitor = comd.ExecuteReader();
+            
+
+                int valor = 0;
+           
+                if (leitor.HasRows)
                 {
-                    valor = leitor.GetInt32(0);
-                    int id = leitor.GetInt32(1);
+                    while (leitor.Read())
+                    {
+                        valor = leitor.GetInt32(0);
+                    }
                 }
+                leitor.Close();
+                comd.Connection.Close();
+            
+
+                LstLucro.Items.Add(valor);
+
             }
-            leitor.Close();
-            comd.Connection.Close();
-
-
-            LstLucro.Items.Add(valor);
-         }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
+        }
     }
 }
